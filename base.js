@@ -1,2 +1,1 @@
-var x=function(u){var s=document.createElement('script');s.src=u;document.body.appendChild(u);};
-x('https://bakkot.github.io/Scrapelets/jszip.min.js');x('https://bakkot.github.io/Scrapelets/FileSaver.min.js');x('https://bakkot.github.io/Scrapelets/zipsave.js');
+zipsave_hook=function(){};var x=function(u){var s=document.createElement('script');s.src=u;document.body.appendChild(s)};x('https://bakkot.github.io/Scrapelets/all.js');
