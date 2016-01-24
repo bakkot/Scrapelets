@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Scrapelets</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1>Links:</h1>
+      <p class="lead">Drag any of these links to the bookmarks bar, or manually add a bookmark with their target as its url. Make sure the link starts with <code>javascript:</code>.</p>
+      <ul class="lead">
+        <li> <a href="javascript:(()=>{try{t=document.querySelector('iframe').contentWindow.document.querySelectorAll('frame')[1].contentWindow.document.querySelector('div>table[border=&quot;1&quot;]');s=[].slice.call(t.querySelectorAll('tr'),3);v=s.map(x=&gt;[].slice.call(x.cells, 3, 6).map(c=&gt;'&quot;'+c.textContent.trim().replace('@stanford.edu','')+'&quot;').join(',')).join('\n');a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/csv'}));a.download='Enrollment.csv';a.dispatchEvent(new MouseEvent('click'))}catch(e){alert(&quot;Failed - are you sure you've loaded the right page?&quot;)}})()">Axess student enrollment</a>
+          (Recent Chrome/Firefox/Edge only.)
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
